@@ -1,7 +1,7 @@
 // your code here
 function getRepositories(){
 	let username = document.getElementById("username").value;
-	let url = `https://api.github.com/users/${name}/repos`;
+	let url = `https://api.github.com/users/${username}/repos`;
 	const req = new XMLHttpRequest();
 	req.open('GET', url);
 	req.send();
