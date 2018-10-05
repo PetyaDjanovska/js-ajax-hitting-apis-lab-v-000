@@ -37,8 +37,7 @@ function getCommits(el) {
 function displayCommits() {
   const commits = JSON.parse(this.responseText);
   console.log(commits);
-  const commitsList = `<ul>${commits.map(commit =>
-        '<li><strong>' + commit.author.login + '</strong> - ' +
+  const commitsList = `<ul>${commits.map(commit => '<li><strong>' + commit.author.login + '</strong> - ' +
         commit.commit.author.name + '-' + commit.commit.message +
         '</li>').join('')}</ul>`;
   document.getElementById('details').innerHTML = commitsList;
@@ -50,7 +49,7 @@ function getBranches(el) {
   const req = new XMLHttpRequest();
   req.open('GET', `https://api.github.com/repos/${username}/${repoName}/branches`);
   req.send();
-  req.addEventListener('load', displayCommits);
+  req.addEventListener('load', displayBranches);
 }
 
 function displayBranches() {
