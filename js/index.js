@@ -34,5 +34,5 @@ function getCommits(el) {
 }
 
 function displayCommits() {
-  var commits = JSON.parse(this.responseText);
+  const commits = JSON.parse(this.responseText);
 }
