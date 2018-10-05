@@ -59,3 +59,7 @@ function getBranches(el) {
   req.send();
   req.addEventListener('load', displayCommits);
 }
+
+function displayBranches() {
+  
+}
