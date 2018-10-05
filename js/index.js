@@ -17,7 +17,11 @@ function showRepositories() {
       r =>
         '<li>' +
         r.name +
-        ` - <a href='https://api.github.com/${r.full_name}'>link to URL</a></li>`
+        ` - <a href='https://api.github.com/${r.full_name}'>link to URL</a>` +
+        ' - <a href="#" data-repo="' +
+        r.name +
+        '" onclick="getCommits(this)">Get Commits</a>
+        </li>'
     )
     .join('')}</ul>`;
   document.getElementById('repositories').innerHTML = repoList;
