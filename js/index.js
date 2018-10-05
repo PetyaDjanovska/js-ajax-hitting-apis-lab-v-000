@@ -16,7 +16,7 @@ function showRepositories() {
     .map(
       r =>
         '<li>' +
-        `<a href='https://api.github.com/${r.full_name}'>${r.name}</a>` +
+        t.html_url +
         ' - <a href="#" data-repo="' +
         r.name +
         '" onclick="getCommits(this)">Get Commits</a></li>'
