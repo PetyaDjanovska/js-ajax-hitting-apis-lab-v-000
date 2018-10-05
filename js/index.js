@@ -26,6 +26,7 @@ function displayRepositories() {
 }
 
 function getCommits(el) {
+  debugger;
   const repoName = el.dataset.repo;
   const username = el.dataset.username;
   const req = new XMLHttpRequest();
