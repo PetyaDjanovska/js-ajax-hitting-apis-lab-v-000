@@ -37,17 +37,10 @@ function getCommits(el) {
 function displayCommits() {
   const commits = JSON.parse(this.responseText);
   console.log(commits);
-  const commitsList = `<ul>${commits
-    .map(
-      commit =>
-        '<li><strong>' +
-        commit.author.login +
-        '</strong> - ' +
-        commit.commit.author.name + '-' +
-        commit.commit.message +
-        '</li>'
-    )
-    .join('')}</ul>`;
+  const commitsList = `<ul>${commits.map(commit =>
+        '<li><strong>' + commit.author.login + '</strong> - ' +
+        commit.commit.author.name + '-' + commit.commit.message +
+        '</li>').join('')}</ul>`;
   document.getElementById('details').innerHTML = commitsList;
 }
 
@@ -62,4 +55,5 @@ function getBranches(el) {
 
 function displayBranches() {
   const branches = JSON.parse(this.responseText);
+  const branchList = `<ul>${branches.map(branch => '<li>' + branch.name + '</li>').join("")}`
 }
