@@ -32,3 +32,7 @@ function getCommits(el) {
     req.send();
     req.addEventListener('load', displayCommits);
 }
+
+function displayCommits() {
+  
+}
