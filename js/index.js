@@ -16,7 +16,7 @@ function showRepositories() {
     .map(
       r =>
         '<li>' +
-        r.full_name +
+        r.name +
         ' - <a href=`https://api.github.com/${r.full_name}`>link to URL</a></li>'
     )
     .join('')}</ul>`;
