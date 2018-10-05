@@ -18,6 +18,7 @@ function displayRepositories() {
         '<li>' +
         `<a href='${r.html_url}'>${r.name}</a>` +
         ' - <a href="#" data-repo="' + r.name +'" data-username="' + r.owner.login + '" onclick="getCommits(this)">Get Commits</a>' +
+        ' - <a href="#" data-repo="' + r.name +'" data-username="' + r.owner.login + '" onclick="getBranches(this)">Get Branches</a>' +
         '</li>'
     )
     .join('')}</ul>`;
